@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Restaurantes Sorroche</title>
+    <style>
+        body{font-family: Arial, Helvetica, sans-serif; margin:0; color:#222; line-height:1.5; background:#fff}
+    .container{max-width:1100px; margin:0 auto; padding:1rem}
+        header{border-bottom:4px solid saddlebrown}
+        header .banner{width:100%; height:auto; max-height:300px; object-fit:cover; display:block}
+        header .title{color:saddlebrown; text-align:center; margin:.5rem 0}
+
+        nav{background:saddlebrown; color:#fff}
+        nav .container{display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap}
+        nav ul{list-style:none; padding:0; margin:0; display:flex; gap:.5rem}
+        nav a{color:#fff; text-decoration:none; padding:.5rem .75rem; border-radius:4px}
+        nav a:focus, nav a:hover{background:rgba(255,255,255,0.08); outline:none}
+
+        main{display:flex; gap:1rem; margin-top:1rem}
+        article{color:saddlebrown; flex:1; background:#fff; padding:1rem; border-radius:6px}
+        aside{width:280px; background:#f7f7f7; padding:1rem; border-radius:6px}
+
+    footer{background:saddlebrown; color:#fff; padding:1rem; margin-top:1rem}
+    footer a{color:#fff}
+    footer a img{vertical-align:middle}
+
+        @media (max-width:800px){
+            main{flex-direction:column}
+            aside{width:100%}
+            nav .container{justify-content:center}
+        }
+
+        .sr-only{position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden}
+    </style>
+</head>
+<body>
+    <header>
+        <img class="banner" src="https://n9.cl/ry1lb" alt="Banner de Restaurantes Sorroche">
+        <div class="container">
+            <h1 class="title">Restaurantes Sorroche</h1>
+        </div>
+    </header>
+
+    <nav aria-label="Navegación principal">
+        <div class="container">
+            <div><strong style="color:antiquewhite">Menú</strong></div>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#reservas">Reservas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section aria-labelledby="inicio">
+            <article id="inicio">
+                <h2>Bienvenido</h2>
+                <p>Bienvenido a Restaurantes Sorroche. Esperamos ofrecer platos que le den el mejor de los gustos, aquí puedes revisar las distintas delicias que cocinamos para usted.</p>
+            </article>
+
+            <article id="menu">
+                <h2>Menú destacado</h2>
+                <p>Aquí puedes mostrar platos, menús o promociones.</p>
+                <ul>
+                    <li>Brasa y Mar — Tacos de lomo de cerdo marinado a la parrilla con camarones al ajillo, salsa de chipotle y pico de mango; mezcla ahumada y fresca en cada bocado.</li>
+                    <li>Risotto Otoñal — Risotto cremoso de calabaza asada con toque de miso blanco y parmesano, coronado con semillas tostadas; umami suave y textura sedosa.</li>
+                    <li>Milhojas cítrico — Capas crujientes de hojaldrado rellenas de crema ligera de mascarpone y yuzu, con polvo de pistacho; postre equilibrado, ácido y dulce.</li>
+                </ul>
+            </article>
+        </section>
+
+        <aside aria-labelledby="aside-info">
+            <h3 id="aside-info">Información rápida</h3>
+            <p><strong>Dirección:</strong> Calle San Antón 47</p>
+            <p><strong>Horario:</strong> Lun–Sab 13:00–23:00</p>
+            <p><a href="mailto:jsansor1505@g.educaand.es">Enviar correo</a></p>
+            <p><a href="tel:+34722240356">Llamar</a></p>
+        </aside>
+    </main>
+
+    <footer id="contacto">
+        <div class="container">
+            <h3>Nuestras redes y contactos</h3>
+            <p>
+                <a href="#" aria-label="Facebook"><img src="https://n9.cl/i2oiy" alt="Facebook" width="40" height="40"></a>
+                <a href="#" aria-label="Instagram"><img src="https://n9.cl/50aur" alt="Instagram" width="40" height="40"></a>
+                <a href="#" aria-label="X/Twitter"><img src="https://n9.cl/6obvxw" alt="X/Twitter" width="40" height="40"></a>
+            </p>
+            <p style="margin-top:.5rem">© Restaurantes Sorroche</p>
+        </div>
+    </footer>
+</body>
+</html>
