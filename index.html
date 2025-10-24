@@ -32,6 +32,18 @@
         }
 
         .sr-only{position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden}
+        /* Estilos para la sección Menú destacado con imágenes */
+        .menu-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:1rem}
+        .menu-item{background:#fff; border-radius:6px; padding:0.5rem; box-shadow:0 1px 3px rgba(0,0,0,0.05); text-align:center}
+        .menu-item img{width:100%; height:180px; object-fit:cover; border-radius:6px 6px 0 0; display:block}
+        .menu-item figcaption{padding:.5rem; color:saddlebrown}
+        @media (max-width:900px){
+            .menu-grid{grid-template-columns:repeat(2,1fr)}
+        }
+        @media (max-width:500px){
+            .menu-grid{grid-template-columns:1fr}
+            .menu-item img{height:160px}
+        }
     </style>
 </head>
 <body>
@@ -44,7 +56,6 @@
 
     <nav aria-label="Navegación principal">
         <div class="container">
-            <div><strong style="color:antiquewhite">Menú</strong></div>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#menu">Menú</a></li>
@@ -60,15 +71,33 @@
                 <h2>Bienvenido</h2>
                 <p>Bienvenido a Restaurantes Sorroche. Esperamos ofrecer platos que le den el mejor de los gustos, aquí puedes revisar las distintas delicias que cocinamos para usted.</p>
             </article>
-//cambio
             <article id="menu">
                 <h2>Menú destacado</h2>
-                <p>Aquí puedes mostrar platos, menús o promociones.</p>
-                <ul>
-                    <li>Brasa y Mar — Tacos de lomo de cerdo marinado a la parrilla con camarones al ajillo, salsa de chipotle y pico de mango; mezcla ahumada y fresca en cada bocado.</li>
-                    <li>Risotto Otoñal — Risotto cremoso de calabaza asada con toque de miso blanco y parmesano, coronado con semillas tostadas; umami suave y textura sedosa.</li>
-                    <li>Milhojas cítrico — Capas crujientes de hojaldrado rellenas de crema ligera de mascarpone y yuzu, con polvo de pistacho; postre equilibrado, ácido y dulce.</li>
-                </ul>
+                <div class="menu-grid" aria-label="Platos destacados">
+                    <figure class="menu-item">
+                        <img src="https://n9.cl/ls0gv" alt="Tacos Brasa y Mar - lomo de cerdo y camarones" loading="lazy">
+                        <figcaption>
+                            <strong>Brasa y Mar</strong>
+                            <p>Tacos de lomo de cerdo marinado a la parrilla con camarones al ajillo, salsa de chipotle y pico de mango.</p>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="menu-item">
+                        <img src="https://n9.cl/aez09" alt="Risotto Otoñal - calabaza asada y parmesano" loading="lazy">
+                        <figcaption>
+                            <strong>Risotto Otoñal</strong>
+                            <p>Risotto cremoso de calabaza asada con toque de miso blanco y parmesano, coronado con semillas tostadas.</p>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="menu-item">
+                        <img src="https://n9.cl/zsh7i" alt="Milhojas cítrico - mascarpone y yuzu" loading="lazy">
+                        <figcaption>
+                            <strong>Milhojas cítrico</strong>
+                            <p>Capas crujientes de hojaldrado rellenas de crema ligera de mascarpone y yuzu, con polvo de pistacho.</p>
+                        </figcaption>
+                    </figure>
+                </div>
             </article>
         </section>
 
