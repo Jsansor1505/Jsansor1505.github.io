@@ -1,11 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h1>Ejercicio 1: Variables y Consola</h1>
-</body>
+    <link rel="stylesheet" href="../assets/styles/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Ejercicio 1</h1>
+      <p>
+        Declara variables de varios tipos. Muestra el contenido en la consola
+        junto con el tipo de dato. En este ejercicio utiliza el console.log,
+        console.error, console.info y el console.debug
+      </p>
+      <div id="resultado"></div>
+    </div>
+  </body>
+  <script>
+    const texto = "Hola Mundo";
+    const numero = 56;
+    const VF = false;
+    const persona = { nombre: "Ana", edad: 25 };
+    console.log("Log estándar:", texto, "| Tipo:", typeof texto);
+    console.info("Info:", numero, "| Tipo:", typeof numero);
+    console.debug("Debug:", VF, "| Tipo:", typeof VF);
+    console.error("Error simulado:", persona, "| Tipo:", typeof persona);
+    document.getElementById("resultado").innerHTML =
+      "Log estándar: " +
+      texto +
+      " | Tipo: " +
+      typeof texto +
+      "<br>" +
+      "Info: " +
+      numero +
+      " | Tipo: " +
+      typeof numero +
+      "<br>" +
+      "Debug: " +
+      VF +
+      " | Tipo: " +
+      typeof VF +
+      "<br>" +
+      "Error simulado: " +
+      JSON.stringify(persona) +
+      " | Tipo: " +
+      typeof persona;
+  </script>
 </html>
