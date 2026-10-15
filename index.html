@@ -3,123 +3,30 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Restaurantes Sorroche</title>
-    <style>
-        body{font-family: Arial, Helvetica, sans-serif; margin:0; color:#222; line-height:1.5; background:#fff}
-    .container{max-width:1100px; margin:0 auto; padding:1rem}
-        header{border-bottom:4px solid saddlebrown}
-        header .banner{width:100%; height:auto; max-height:300px; object-fit:cover; display:block}
-        header .title{color:saddlebrown; text-align:center; margin:.5rem 0}
-
-        nav{background:saddlebrown; color:#fff}
-        nav .container{display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap}
-        nav ul{list-style:none; padding:0; margin:0; display:flex; gap:.5rem}
-        nav a{color:#fff; text-decoration:none; padding:.5rem .75rem; border-radius:4px}
-        nav a:focus, nav a:hover{background:rgba(255,255,255,0.08); outline:none}
-
-        main{display:flex; gap:1rem; margin-top:1rem}
-        article{color:saddlebrown; flex:1; background:#fff; padding:1rem; border-radius:6px}
-        aside{width:280px; background:#f7f7f7; padding:1rem; border-radius:6px}
-
-    footer{background:saddlebrown; color:#fff; padding:1rem; margin-top:1rem}
-    footer a{color:#fff}
-    footer a img{vertical-align:middle}
-
-        @media (max-width:800px){
-            main{flex-direction:column}
-            aside{width:100%}
-            nav .container{justify-content:center}
-        }
-
-        .sr-only{position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden}
-        /* Estilos para la sección Menú destacado con imágenes */
-        .menu-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:1rem}
-        .menu-item{background:#fff; border-radius:6px; padding:0.5rem; box-shadow:0 1px 3px rgba(0,0,0,0.05); text-align:center}
-        .menu-item img{width:100%; height:180px; object-fit:cover; border-radius:6px 6px 0 0; display:block}
-        .menu-item figcaption{padding:.5rem; color:saddlebrown}
-        @media (max-width:900px){
-            .menu-grid{grid-template-columns:repeat(2,1fr)}
-        }
-        @media (max-width:500px){
-            .menu-grid{grid-template-columns:1fr}
-            .menu-item img{height:160px}
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <img class="banner" src="https://n9.cl/ry1lb" alt="Banner de Restaurantes Sorroche">
-        <div class="container">
-            <h1 class="title">Restaurantes Sorroche</h1>
-        </div>
-    </header>
-
-    <nav aria-label="Navegación principal">
-        <div class="container">
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#menu">Menú</a></li>
-                <li><a href="#reservas">Reservas</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <main class="container">
-        <section aria-labelledby="inicio">
-            <article id="inicio">
-                <h2>Bienvenido</h2>
-                <p>Bienvenido a Restaurantes Sorroche. Esperamos ofrecer platos que le den el mejor de los gustos, aquí puedes revisar las distintas delicias que cocinamos para usted.</p>
-            </article>
-            <article id="menu">
-                <h2>Menú destacado</h2>
-                <div class="menu-grid" aria-label="Platos destacados">
-                    <figure class="menu-item">
-                        <img src="https://n9.cl/ls0gv" alt="Tacos Brasa y Mar - lomo de cerdo y camarones" loading="lazy">
-                        <figcaption>
-                            <strong>Brasa y Mar</strong>
-                            <p>Tacos de lomo de cerdo marinado a la parrilla con camarones al ajillo, salsa de chipotle y pico de mango.</p>
-                        </figcaption>
-                    </figure>
-
-                    <figure class="menu-item">
-                        <img src="https://n9.cl/aez09" alt="Risotto Otoñal - calabaza asada y parmesano" loading="lazy">
-                        <figcaption>
-                            <strong>Risotto Otoñal</strong>
-                            <p>Risotto cremoso de calabaza asada con toque de miso blanco y parmesano, coronado con semillas tostadas.</p>
-                        </figcaption>
-                    </figure>
-
-                    <figure class="menu-item">
-                        <img src="https://n9.cl/zsh7i" alt="Milhojas cítrico - mascarpone y yuzu" loading="lazy">
-                        <figcaption>
-                            <strong>Milhojas cítrico</strong>
-                            <p>Capas crujientes de hojaldrado rellenas de crema ligera de mascarpone y yuzu, con polvo de pistacho.</p>
-                        </figcaption>
-                    </figure>
-                </div>
-            </article>
-        </section>
-
-        <aside aria-labelledby="aside-info">
-            <h3 id="aside-info">Información rápida</h3>
-            <p><strong>Dirección:</strong> Calle San Antón 47</p>
-            <p><strong>Horario:</strong> Lun–Sab 13:00–23:00</p>
-            <p><a href="mailto:jsansor1505@g.educaand.es">Enviar correo</a></p>
-            <p><a href="tel:+34722240356">Llamar</a></p>
-        </aside>
-    </main>
-
-    <footer id="contacto">
-        <div class="container">
-            <h3>Nuestras redes y contactos</h3>
-            <p>
-                <a href="#" aria-label="Facebook"><img src="https://n9.cl/i2oiy" alt="Facebook" width="40" height="40"></a>
-                <a href="#" aria-label="Instagram"><img src="https://n9.cl/50aur" alt="Instagram" width="40" height="40"></a>
-                <a href="#" aria-label="X/Twitter"><img src="https://n9.cl/6obvxw" alt="X/Twitter" width="40" height="40"></a>
-            </p>
-            <p style="margin-top:.5rem">© Restaurantes Sorroche</p>
-        </div>
-    </footer>
-</body>
+    <title>Proyectos JavaScript</title>
+    <body>
+        <ul>
+            <li><a href="fundamentos-js/ejercicio1/index.html">Proyecto 1</a></li>
+            <li><a href="fundamentos-js/ejercicio2/index.html">Proyecto 2</a></li>
+            <li><a href="fundamentos-js/ejercicio3/index.html">Proyecto 3</a></li>
+            <li><a href="fundamentos-js/ejercicio4/index.html">Proyecto 4</a></li>
+            <li><a href="fundamentos-js/ejercicio5/index.html">Proyecto 5</a></li>
+            <li><a href="fundamentos-js/ejercicio6/index.html">Proyecto 6</a></li>
+            <li><a href="fundamentos-js/ejercicio7/index.html">Proyecto 7</a></li>
+            <li><a href="fundamentos-js/ejercicio8/index.html">Proyecto 8</a></li>
+            <li><a href="fundamentos-js/ejercicio9/index.html">Proyecto 9</a></li>
+            <li><a href="fundamentos-js/ejercicio10/index.html">Proyecto 10</a></li>
+            <li><a href="fundamentos-js/ejercicio11/index.html">Proyecto 11</a></li>
+            <li><a href="fundamentos-js/ejercicio12/index.html">Proyecto 12</a></li>
+            <li><a href="fundamentos-js/ejercicio13/index.html">Proyecto 13</a></li>
+            <li><a href="fundamentos-js/ejercicio14/index.html">Proyecto 14</a></li>
+            <li><a href="fundamentos-js/ejercicio15/index.html">Proyecto 15</a></li>
+            <li><a href="fundamentos-js/ejercicio16/index.html">Proyecto 16</a></li>
+            <li><a href="fundamentos-js/ejercicio17/index.html">Proyecto 17</a></li>
+            <li><a href="fundamentos-js/ejercicio18/index.html">Proyecto 18</a></li>
+            <li><a href="fundamentos-js/ejercicio19/index.html">Proyecto 19</a></li>
+            <li><a href="fundamentos-js/ejercicio20/index.html">Proyecto 20</a></li>
+            <li><a href="fundamentos-js/ejercicio21/index.html">Proyecto 21</a></li>
+        </ul>
+    </body>
 </html>
