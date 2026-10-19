@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/styles/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Ejercicio 3</h1>
+      <p>
+        Declara un objeto persona con las propiedades más habituales, usando
+        todos los tipos de datos incluidos un array y otro objeto. Muestra el
+        contenido usando console.log y console.table
+      </p>
+      <div id="resultado"></div>
+    </div>
+  </body>
+  <script>
+    const persona = {
+      nombre: "Juan",
+      edad: 30,
+      casado: true,
+      hijos: ["Ana", "Luis"],
+      direccion: {
+        calle: "Calle Falsa",
+        numero: 123,
+        ciudad: "Madrid",
+        pais: "España",
+      },
+    };
+
+    console.log("Objeto persona:", persona);
+    console.table(persona);
+  </script>
+</html>
