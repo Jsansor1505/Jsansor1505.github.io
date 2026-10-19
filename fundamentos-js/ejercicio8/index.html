@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/styles/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Ejercicio 8</h1>
+      <p>
+        Escribe una función que permita generar un número aleatorio entero entre
+        un intervalo. Por ejemplo azar(-5, 10). Salida: 3
+      </p>
+      <div id="resultado"></div>
+    </div>
+  </body>
+  <script>
+    function azar(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    const numero = azar(-5, 10);
+    document.getElementById("resultado").innerHTML = numero;
+  </script>
+</html>

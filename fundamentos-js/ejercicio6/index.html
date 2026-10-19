@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/styles/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Ejercicio 6</h1>
+      <p>
+         Crea un programa anterior para que se obtenga el número de un campo input. 
+      </p>
+      <input type="number" id="numero" placeholder="Ingresa un número" />
+      <button onclick="resultado()">Verificar</button>
+      <div id="resultado"></div>
+    </div>
+  </body>
+  <script>
+    function resultado() {
+      const num = Number(document.getElementById("numero").value);
+      if (num % 2 === 0) {
+      document.getElementById("resultado").innerHTML = "El número es par.";
+    } else {
+      document.getElementById("resultado").innerHTML = "El número es impar.";
+    }
+  }
+  </script>
+</html>

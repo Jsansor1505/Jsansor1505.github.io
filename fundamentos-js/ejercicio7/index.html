@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/styles/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Ejercicio 7</h1>
+      <p>
+        Escribe una función que reciba una palabra y cuente cuántas vocales tiene.  Usa un bucle for y la función 
+includes() para verificar si un carácter es una vocal. 
+      </p>
+      <input type="text" id="palabra" placeholder="Ingresa una palabra" />
+      <button onclick="contador()">Verificar</button>
+      <div id="resultado"></div>
+    </div>
+  </body>
+  <script>
+    function contador() {
+      const palabra = document.getElementById("palabra").value;
+      const vocales = ['a', 'e', 'i', 'o', 'u'];
+      let contador = 0;
+      for (let i = 0; i < palabra.length; i++) {
+        if (vocales.includes(palabra[i].toLowerCase())) {
+          contador++;
+        }
+      }
+      document.getElementById("resultado").innerHTML = "La palabra tiene " + contador + " vocales.";
+    }
+    
+  </script>
+</html>

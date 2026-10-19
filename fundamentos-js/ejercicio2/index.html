@@ -21,6 +21,7 @@
     for (let i = 0; i < 100; i++) {
       const numero = Math.floor(Math.random() * 100) + 1;
       console.table({ index: i, value: numero });
+      document.getElementById("resultado").innerHTML += numero + " ";
     }
   </script>
 </html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/styles/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Ejercicio 5</h1>
+      <p>
+        Crea un programa que verifique si un número ingresado por el usuario es par o impar. 
+      </p>
+      <div id="resultado"></div>
+    </div>
+  </body>
+  <script>
+    const num = Number(prompt("Ingresa el número:"));
+    if (num % 2 === 0) {
+      document.getElementById("resultado").innerHTML = "El número es par.";
+    } else {
+      document.getElementById("resultado").innerHTML = "El número es impar.";
+    }
+  </script>
+</html>

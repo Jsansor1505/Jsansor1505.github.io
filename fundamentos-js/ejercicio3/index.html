@@ -26,12 +26,30 @@
       direccion: {
         calle: "Calle Falsa",
         numero: 123,
-        ciudad: "Madrid",
+        ciudad: "Málaga",
         pais: "España",
       },
     };
 
     console.log("Objeto persona:", persona);
     console.table(persona);
+    document.getElementById("resultado").innerHTML =
+    "Objeto persona:" +
+      "<br>" +
+      persona.nombre +
+      "<br>" +
+      persona.edad +
+      "<br>" +
+      persona.casado +
+      "<br>" +
+      persona.hijos +
+      "<br>" +
+      persona.direccion.calle +
+      "<br>" +
+      persona.direccion.numero +
+      "<br>" +
+      persona.direccion.ciudad +
+      "<br>" +
+      persona.direccion.pais;
   </script>
 </html>
