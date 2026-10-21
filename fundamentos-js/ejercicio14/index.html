@@ -8,14 +8,29 @@
   </head>
   <body>
     <div class="container">
-      <h1>Ejercicio </h1>
+      <h1>Ejercicio 14</h1>
       <p>
-        
+        Verificar si una palabra es un palíndromo Escribe una función que
+        verifique si una palabra es un palíndromo (es decir, si se lee igual al
+        derecho y al revés). Compara la palabra original con su versión
+        invertida usando split(), reverse() y join().
       </p>
+      <input type="text" id="palabra" placeholder="Ingresa una palabra" />
+      <button onclick="invertir()">Verificar</button>
       <div id="resultado"></div>
     </div>
   </body>
   <script>
-    document.getElementById("resultado").innerHTML = "";
+    function invertir() {
+      const palabra = document.getElementById("palabra").value.toLowerCase();
+      const invertida = palabra.split("").reverse().join("").toLowerCase();
+      if (palabra === invertida) {
+        document.getElementById("resultado").innerHTML =
+          "La palabra es un palíndromo.";
+      } else {
+        document.getElementById("resultado").innerHTML =
+          "La palabra no es un palíndromo.";
+      }
+    }
   </script>
 </html>

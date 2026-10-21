@@ -8,14 +8,23 @@
   </head>
   <body>
     <div class="container">
-      <h1>Ejercicio </h1>
+      <h1>Ejercicio 17</h1>
       <p>
-        
+        Ordenar un array de números Escribe un programa que tome un array de
+        números y lo ordene de menor a mayor. Usa el método sort() con una
+        función de comparación.
       </p>
+        <input type="text" id="numeros" placeholder="Ingresa números separados por comas" />
+        <button onclick="ordenar()">Ordenar</button>
+      
       <div id="resultado"></div>
     </div>
   </body>
   <script>
-    document.getElementById("resultado").innerHTML = "";
+    function ordenar() {
+      const numeros = document.getElementById("numeros").value.split(",");
+      const numerosOrdenados = numeros.sort();
+      document.getElementById("resultado").innerHTML = "Números ordenados: " + numerosOrdenados.join(", ");
+    }
   </script>
 </html>

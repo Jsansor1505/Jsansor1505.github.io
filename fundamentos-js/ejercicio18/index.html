@@ -8,14 +8,29 @@
   </head>
   <body>
     <div class="container">
-      <h1>Ejercicio </h1>
+      <h1>Ejercicio 18</h1>
       <p>
-        
+        Encontrar la palabra más larga en una frase. Escribe una función que
+        encuentre la palabra más larga en una frase ingresada por el usuario.
+        Usa split() para dividir la frase en palabras, luego recorre el array
+        con un bucle para encontrar la palabra más larga.
       </p>
+      <input type="text" id="frase" placeholder="Ingresa una frase" />
+      <button onclick="contar()">Verificar</button>
       <div id="resultado"></div>
     </div>
   </body>
   <script>
-    document.getElementById("resultado").innerHTML = "";
+    function contar() {
+      const frase = document.getElementById("frase").value;
+      const palabras = frase.split(" ");
+      let palabraMasLarga = "";
+      for (let i = 0; i < palabras.length; i++) {
+        if (palabras[i].length > palabraMasLarga.length) {
+          palabraMasLarga = palabras[i];
+        }
+      }
+      document.getElementById("resultado").innerHTML = "La palabra más larga es: " + palabraMasLarga;
+    }
   </script>
 </html>

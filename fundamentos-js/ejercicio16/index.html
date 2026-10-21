@@ -8,14 +8,22 @@
   </head>
   <body>
     <div class="container">
-      <h1>Ejercicio </h1>
+      <h1>Ejercicio 16</h1>
       <p>
-        
+        Convertir grados Celsius a Fahrenheit Escribe una función que convierta
+        grados Celsius a Fahrenheit. La fórmula es: Fahrenheit = (Celsius * 9/5)
+        + 32
       </p>
+      <input type="number" id="celsius" placeholder="Ingresa grados Celsius" />
+      <button onclick="convertir()">Convertir</button>
       <div id="resultado"></div>
     </div>
   </body>
   <script>
-    document.getElementById("resultado").innerHTML = "";
+    function convertir() {
+      const celsius = parseFloat(document.getElementById("celsius").value);
+      const fahrenheit = (celsius * 9/5) + 32;
+      document.getElementById("resultado").innerHTML = celsius+" ºC son "+fahrenheit+" ºF";
+    }
   </script>
 </html>

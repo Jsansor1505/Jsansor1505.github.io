@@ -8,14 +8,29 @@
   </head>
   <body>
     <div class="container">
-      <h1>Ejercicio </h1>
+      <h1>Ejercicio 11</h1>
       <p>
-        
+        Escribe un programa que genere 100 números del 1 al 20. Debe mostrar la
+        cuenta de los números que al menos han aparecido una vez.
       </p>
       <div id="resultado"></div>
     </div>
   </body>
   <script>
-    document.getElementById("resultado").innerHTML = "";
+    const numeros = [];
+    for (let i = 0; i < 100; i++) {
+      const numero = Math.floor(Math.random() * 20) + 1;
+      numeros.push(numero);
+      document.getElementById("resultado").innerHTML += numero + " ";
+    }
+    document.getElementById("resultado").innerHTML += "<br>";
+    let contador = 0;
+    for (let i = 0; i < 100; i++) {
+      for (let j = i+1; j < 100; j++) {
+        if (numeros[i] == numeros[j]) {
+          document.getElementById("resultado").innerHTML += "El número " + numeros[i] + " está repetido<br>";
+        }
+      }
+    }
   </script>
 </html>

@@ -22,8 +22,8 @@
   </body>
   <script>
     function invertir() {
-      const palabra = document.getElementById("palabra").value;
-      const invertida = palabra.split("").reverse().join("");
+      const palabra = document.getElementById("palabra").value.toLowerCase();
+      const invertida = palabra.split("").reverse().join("").toLowerCase();
       document.getElementById("resultado").innerHTML = invertida;
     }
   </script>

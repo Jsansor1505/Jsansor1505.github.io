@@ -8,14 +8,27 @@
   </head>
   <body>
     <div class="container">
-      <h1>Ejercicio </h1>
+      <h1>Ejercicio 12</h1>
       <p>
-        
+        Filtrar números pares de un array Crea una función que tome un array de
+        números y devuelva un nuevo array con solo los números pares.Usa
+        filter() y el operador %
       </p>
       <div id="resultado"></div>
     </div>
   </body>
   <script>
-    document.getElementById("resultado").innerHTML = "";
+    const numeros = [];
+    for (let i = 0; i < 15; i++) {
+      const numero = Math.floor(Math.random() * 100) + 1;
+      numeros.push(numero);
+      document.getElementById("resultado").innerHTML += numero + " ";
+    }
+    document.getElementById("resultado").innerHTML += "<br>Filtrando números pares:<br>";
+for (let i = 0; i < 15; i++) {
+  if (numeros[i] % 2 === 0) {
+    document.getElementById("resultado").innerHTML += numeros[i] + " ";
+  }
+}
   </script>
 </html>

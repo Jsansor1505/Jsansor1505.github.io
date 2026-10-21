@@ -8,14 +8,33 @@
   </head>
   <body>
     <div class="container">
-      <h1>Ejercicio </h1>
+      <h1>Ejercicio 10</h1>
       <p>
-        
+        Encontrar el número más grande en un array Crea una función que
+        encuentre el número más grande en un array. Usa el método Math.max() y
+        el operador. para "expandir" el array
       </p>
       <div id="resultado"></div>
     </div>
   </body>
   <script>
-    document.getElementById("resultado").innerHTML = "";
+    const numeros = [];
+    for (let i = 0; i < 5; i++) {
+      const numero = Math.floor(Math.random() * 5) + 1;
+      numeros.push(numero);
+    }
+    const maximo = Math.max(
+      numeros[0],
+      numeros[1],
+      numeros[2],
+      numeros[3],
+      numeros[4],
+    );
+    document.getElementById("resultado").innerHTML =
+      "Lista de números: " +
+      numeros +
+      "<br>" +
+      "El número más grande es: " +
+      maximo;
   </script>
 </html>

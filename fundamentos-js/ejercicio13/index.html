@@ -8,14 +8,24 @@
   </head>
   <body>
     <div class="container">
-      <h1>Ejercicio </h1>
+      <h1>Ejercicio 13</h1>
       <p>
-        
+        Contar palabras en una frase Escribe un programa que cuente cuántas
+        palabras tiene una frase ingresada por el usuario. Usa el método split()
+        para dividir la frase en un array de palabras.
       </p>
+      <input type="text" id="frase" placeholder="Ingresa una frase" />
+      <button onclick="contar()">Verificar</button>
       <div id="resultado"></div>
     </div>
   </body>
   <script>
-    document.getElementById("resultado").innerHTML = "";
+    function contar() {
+      const frase = document.getElementById("frase").value;
+      const palabras = frase.split(" ");
+      const cantidad = palabras.length;
+      document.getElementById("resultado").innerHTML =
+        "La frase tiene " + cantidad + " palabras.";
+    }
   </script>
 </html>
